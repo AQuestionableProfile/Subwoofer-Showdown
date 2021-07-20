@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="CakeWot.png">
+	<!-- Created with Adobe Animate version 21.0.2.37893 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Cake portrait enter instance 10000" x="0" y="0" width="512" height="512" frameX="-47" frameY="0" frameWidth="512" frameHeight="512"/>
+	<SubTexture name="Cake portrait enter instance 10001" x="0" y="0" width="512" height="512" frameX="-35" frameY="0" frameWidth="512" frameHeight="512"/>
+	<SubTexture name="Cake portrait enter instance 10002" x="0" y="0" width="512" height="512" frameX="-28" frameY="0" frameWidth="512" frameHeight="512"/>
+	<SubTexture name="Cake portrait enter instance 10003" x="0" y="0" width="512" height="512" frameX="-23" frameY="0" frameWidth="512" frameHeight="512"/>
+	<SubTexture name="Cake portrait enter instance 10004" x="0" y="0" width="512" height="512" frameX="-19" frameY="0" frameWidth="512" frameHeight="512"/>
+	<SubTexture name="Cake portrait enter instance 10005" x="0" y="0" width="512" height="512" frameX="-12" frameY="0" frameWidth="512" frameHeight="512"/>
+	<SubTexture name="Cake portrait enter instance 10006" x="0" y="0" width="512" height="512" frameX="0" frameY="0" frameWidth="512" frameHeight="512"/>
+</TextureAtlas>
