@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Maggie_Assets.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="0" name="MAGGIE DOWN POSE0000"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="0" name="MAGGIE DOWN POSE0001"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0002"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0003"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0004"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0005"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0006"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0007"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0008"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0009"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0010"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0011"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0012"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0013"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="160" frameX="-20" pivotY="0" pivotX="0" height="806" width="444" y="0" x="444" name="MAGGIE DOWN POSE0014"/>
+	<SubTexture name="Maggie Idle0000" x="888" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0001" x="888" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0002" x="1332" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0003" x="1332" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0004" x="1776" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0005" x="1776" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0006" x="2220" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0007" x="2220" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0008" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0009" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0010" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0011" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0012" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0013" x="2664" y="0" width="444" height="806"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="30" frameX="-210" pivotY="0" pivotX="0" height="806" width="444" y="0" x="3108" name="Maggie Left Pose0000"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="30" frameX="-210" pivotY="0" pivotX="0" height="806" width="444" y="0" x="3108" name="Maggie Left Pose0001"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="30" frameX="-210" pivotY="0" pivotX="0" height="806" width="444" y="0" x="3552" name="Maggie Left Pose0002"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="30" frameX="-210" pivotY="0" pivotX="0" height="806" width="444" y="0" x="3552" name="Maggie Left Pose0003"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="30" frameX="-210" pivotY="0" pivotX="0" height="806" width="444" y="0" x="3552" name="Maggie Left Pose0004"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="30" frameX="-210" pivotY="0" pivotX="0" height="806" width="444" y="0" x="3552" name="Maggie Left Pose0005"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="30" frameX="-210" pivotY="0" pivotX="0" height="806" width="444" y="0" x="3552" name="Maggie Left Pose0006"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="30" frameX="-210" pivotY="0" pivotX="0" height="806" width="444" y="0" x="3552" name="Maggie Left Pose0007"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="30" frameX="-210" pivotY="0" pivotX="0" height="806" width="444" y="0" x="3552" name="Maggie Left Pose0008"/>
+	<SubTexture frameHeight="806" frameWidth="444" frameY="30" frameX="-210" pivotY="0" pivotX="0" height="806" width="444" y="0" x="3552" name="Maggie Left Pose0009"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="70" frameX="30" pivotY="0" pivotX="0" height="807" width="502" y="806" x="0" name="Maggie Pose Left0000"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="70" frameX="30" pivotY="0" pivotX="0" height="807" width="502" y="806" x="0" name="Maggie Pose Left0001"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="70" frameX="30" pivotY="0" pivotX="0" height="807" width="502" y="806" x="502" name="Maggie Pose Left0002"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="70" frameX="30" pivotY="0" pivotX="0" height="807" width="502" y="806" x="502" name="Maggie Pose Left0003"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="70" frameX="30" pivotY="0" pivotX="0" height="807" width="502" y="806" x="502" name="Maggie Pose Left0004"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="70" frameX="30" pivotY="0" pivotX="0" height="807" width="502" y="806" x="502" name="Maggie Pose Left0005"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="70" frameX="30" pivotY="0" pivotX="0" height="807" width="502" y="806" x="502" name="Maggie Pose Left0006"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="70" frameX="30" pivotY="0" pivotX="0" height="807" width="502" y="806" x="502" name="Maggie Pose Left0007"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="70" frameX="30" pivotY="0" pivotX="0" height="807" width="502" y="806" x="502" name="Maggie Pose Left0008"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="70" frameX="30" pivotY="0" pivotX="0" height="807" width="502" y="806" x="502" name="Maggie Pose Left0009"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1004" name="Maggie Up Pose0000"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1004" name="Maggie Up Pose0001"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0002"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0003"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0004"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0005"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0006"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0007"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0008"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0009"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0010"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0011"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0012"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0013"/>
+	<SubTexture frameHeight="806" frameWidth="502" frameY="-60" frameX="30" pivotY="0" pivotX="0" height="806" width="502" y="806" x="1506" name="Maggie Up Pose0014"/>
+</TextureAtlas>

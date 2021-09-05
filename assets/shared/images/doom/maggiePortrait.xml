@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="maggiePortrait.png">
+	<!-- Created with Adobe Animate version 21.0.2.37893 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Maggie Portrait Enter instance 10000" x="0" y="0" width="424" height="424" frameX="225" frameY="0" frameWidth="424" frameHeight="424"/>
+	<SubTexture name="Maggie Portrait Enter instance 10001" x="0" y="0" width="424" height="424" frameX="219" frameY="0" frameWidth="424" frameHeight="424"/>
+	<SubTexture name="Maggie Portrait Enter instance 10002" x="0" y="0" width="424" height="424" frameX="215" frameY="0" frameWidth="424" frameHeight="424"/>
+	<SubTexture name="Maggie Portrait Enter instance 10003" x="0" y="0" width="424" height="424" frameX="213" frameY="0" frameWidth="424" frameHeight="424"/>
+	<SubTexture name="Maggie Portrait Enter instance 10004" x="0" y="0" width="424" height="424" frameX="211" frameY="0" frameWidth="424" frameHeight="424"/>
+	<SubTexture name="Maggie Portrait Enter instance 10005" x="0" y="0" width="424" height="424" frameX="207" frameY="0" frameWidth="424" frameHeight="424"/>
+	<SubTexture name="Maggie Portrait Enter instance 10006" x="0" y="0" width="424" height="424" frameX="200" frameY="0" frameWidth="424" frameHeight="424"/>
+</TextureAtlas>
