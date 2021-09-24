@@ -1,10 +1,11 @@
 package;
 
-
+#if desktop
 import LuaClass.LuaCamera;
 import LuaClass.LuaCharacter;
-import lime.media.openal.AL;
 import LuaClass.LuaNote;
+#end
+import lime.media.openal.AL;
 import Song.Event;
 import openfl.media.Sound;
 #if sys
@@ -792,6 +793,7 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
+		#if desktop
 		if (executeModchart)
 			{
 				new LuaCamera(camGame,"camGame").Register(ModchartState.lua);
@@ -802,6 +804,7 @@ class PlayState extends MusicBeatState
 				new LuaCharacter(gf,"gf").Register(ModchartState.lua);
 				new LuaCharacter(boyfriend,"boyfriend").Register(ModchartState.lua);
 			}
+		#end
 		var index = 0;
 
 		if (startTime != 0)
@@ -1555,10 +1558,10 @@ class PlayState extends MusicBeatState
 		if (useVideo)
 			GlobalVideo.get().resume();
 
+		#if desktop
 		if (executeModchart)
 			luaModchart.executeState("songStart",[null]);
 
-		#if desktop
 		// Updating Discord Rich Presence (with Time Left)
 		DiscordClient.changePresence(detailsText
 			+ " "
@@ -2093,10 +2096,12 @@ class PlayState extends MusicBeatState
 
 		@:privateAccess
 		{
+		#if desktop
+      // The __backend.handle attribute is only available on native.
 			lime.media.openal.AL.sourcef(FlxG.sound.music._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
 			if (vocals.playing)
 				lime.media.openal.AL.sourcef(vocals._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
-
+		#end
 		}
 
 		#if desktop
@@ -2151,18 +2156,22 @@ class PlayState extends MusicBeatState
 					var dunceNote:Note = unspawnNotes[0];
 					notes.add(dunceNote);
 
+					#if desktop
 					if (executeModchart)
 					{
 						new LuaNote(dunceNote,currentLuaIndex);			
 						dunceNote.luaID = currentLuaIndex;
-					}		
+					}
+					#end		
 					
 					if (executeModchart)
 					{
+						#if desktop
 						if (!dunceNote.isSustainNote)
 							dunceNote.cameras = [camNotes];
 						else
 							dunceNote.cameras = [camSustains];
+						#end
 					}
 					else
 					{
@@ -2194,9 +2203,12 @@ class PlayState extends MusicBeatState
 					// Song ends abruptly on slow rate even with second condition being deleted, 
 					// and if it's deleted on songs like cocoa then it would end without finishing instrumental fully,
 					// so no reason to delete it at all
-					if (unspawnNotes.length == 0 && FlxG.sound.music.length - Conductor.songPosition <= 100)
+					if (unspawnNotes.length == 0 && notes.length == 0)
 					{
-						endSong();
+						endingSong = true;
+						new FlxTimer().start(2, function(timer) {
+							endSong();
+						});
 					}
 				}
 			}
@@ -2595,7 +2607,7 @@ class PlayState extends MusicBeatState
 		{
 			if (startedCountdown)
 			{
-				Conductor.songPosition += FlxG.elapsed * 1000;
+				Conductor.songPosition += FlxG.elapsed * (1000 * songMultiplier);
 				Conductor.rawPosition = Conductor.songPosition;
 				if (Conductor.songPosition >= 0)
 					startSong();
@@ -2979,14 +2991,14 @@ class PlayState extends MusicBeatState
 						if (daNote.mustPress)
 						{
 							daNote.y = (playerStrums.members[Math.floor(Math.abs(daNote.noteData))].y
-								+ 0.45 * ((Conductor.rawPosition - daNote.strumTime) / songMultiplier) * 
+								+ 0.45 * ((Conductor.songPosition - daNote.strumTime) / songMultiplier) * 
 								(FlxMath.roundDecimal(PlayStateChangeables.scrollSpeed == 1 ? SONG.speed : PlayStateChangeables.scrollSpeed,
 									2) )) 
 								- daNote.noteYOff;
 						}
 						else
 							daNote.y = (strumLineNotes.members[Math.floor(Math.abs(daNote.noteData))].y
-								+ 0.45 * ((Conductor.rawPosition - daNote.strumTime) / songMultiplier) * (FlxMath.roundDecimal(PlayStateChangeables.scrollSpeed == 1 ? SONG.speed : PlayStateChangeables.scrollSpeed,
+								+ 0.45 * ((Conductor.songPosition - daNote.strumTime) / songMultiplier) * (FlxMath.roundDecimal(PlayStateChangeables.scrollSpeed == 1 ? SONG.speed : PlayStateChangeables.scrollSpeed,
 									2))) - daNote.noteYOff;
 						if (daNote.isSustainNote)
 						{
@@ -3026,11 +3038,11 @@ class PlayState extends MusicBeatState
 					{
 						if (daNote.mustPress)
 							daNote.y = (playerStrums.members[Math.floor(Math.abs(daNote.noteData))].y
-								- 0.45 * ((Conductor.rawPosition - daNote.strumTime) / songMultiplier) * (FlxMath.roundDecimal(PlayStateChangeables.scrollSpeed == 1 ? SONG.speed : PlayStateChangeables.scrollSpeed,
+								- 0.45 * ((Conductor.songPosition - daNote.strumTime) / songMultiplier) * (FlxMath.roundDecimal(PlayStateChangeables.scrollSpeed == 1 ? SONG.speed : PlayStateChangeables.scrollSpeed,
 									2))) + daNote.noteYOff;
 						else
 							daNote.y = (strumLineNotes.members[Math.floor(Math.abs(daNote.noteData))].y
-								- 0.45 * ((Conductor.rawPosition - daNote.strumTime) / songMultiplier) * (FlxMath.roundDecimal(PlayStateChangeables.scrollSpeed == 1 ? SONG.speed : PlayStateChangeables.scrollSpeed,
+								- 0.45 * ((Conductor.songPosition - daNote.strumTime) / songMultiplier) * (FlxMath.roundDecimal(PlayStateChangeables.scrollSpeed == 1 ? SONG.speed : PlayStateChangeables.scrollSpeed,
 									2))) + daNote.noteYOff;
 						if (daNote.isSustainNote)
 						{
@@ -3439,8 +3451,8 @@ class PlayState extends MusicBeatState
 		canPause = false;
 		FlxG.sound.music.volume = 0;
 		vocals.volume = 0;
-		FlxG.sound.music.pause();
-		vocals.pause();
+		FlxG.sound.music.stop();
+		vocals.stop();
 		if (SONG.validScore)
 		{
 			// adjusting the highscore song name to be compatible
@@ -4242,10 +4254,12 @@ class PlayState extends MusicBeatState
 		persistentDraw = true;
 		paused = true;
 
-		if (FlxG.sound.music != null)
+		if (FlxG.sound.music.playing)
 		{
 			FlxG.sound.music.pause();
-			vocals.pause();
+			if (vocals != null)
+				if (vocals.playing)
+					vocals.pause();
 		}
 
 		openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
