@@ -170,10 +170,11 @@ class ChartingState extends MusicBeatState
 
 		if (PlayState.SONG != null)
 		{
-			if (PlayState.isSM)
-				_song = Song.conversionChecks(Song.loadFromJsonRAW(File.getContent(PlayState.pathToSm + "/converted.json")));
-			else
-			{
+			if (PlayState.isSM){
+				#if desktop
+        	_song = Song.conversionChecks(Song.loadFromJsonRAW(File.getContent(PlayState.pathToSm + "/converted.json")));
+                #end
+			}else{
 				var songFormat = StringTools.replace(PlayState.SONG.song, " ", "-");
 				switch (songFormat) {
 					case 'Dad-Battle': songFormat = 'Dadbattle';
@@ -1300,6 +1301,32 @@ class ChartingState extends MusicBeatState
 			if (!PlayState.isSM)
 			vocals.stop();
 			PlayState.startTime = _song.notes[curSection].startTime;
+			while (curRenderedNotes.members.length > 0)
+			{
+				curRenderedNotes.remove(curRenderedNotes.members[0], true);
+			}
+
+			while (curRenderedSustains.members.length > 0)
+			{
+				curRenderedSustains.remove(curRenderedSustains.members[0], true);
+			}
+		
+			while (sectionRenderes.members.length > 0)
+			{
+				sectionRenderes.remove(sectionRenderes.members[0], true);
+			}
+			var toRemove = [];
+
+			for (i in _song.notes)
+			{
+				if (i.startTime > FlxG.sound.music.length)
+					toRemove.push(i);
+			}
+
+			for (i in toRemove)
+				_song.notes.remove(i);
+
+			toRemove = []; // clear memory			
 			LoadingState.loadAndSwitchState(new PlayState());
 		});
 
@@ -1776,6 +1803,20 @@ class ChartingState extends MusicBeatState
 	{
 
 		regenerateLines();
+
+		for(i in curRenderedNotes.members)
+			{
+				i.y = getYfromStrum(i.strumTime) * zoomFactor;
+				if (i.noteCharterObject != null)
+				{
+					curRenderedSustains.remove(i.noteCharterObject);
+					var sustainVis:FlxSprite = new FlxSprite(i.x + (GRID_SIZE / 2),
+					i.y + GRID_SIZE).makeGraphic(8, Math.floor((getYfromStrum(i.strumTime + i.sustainLength) * zoomFactor) - i.y),FlxColor.WHITE);
+	
+					i.noteCharterObject = sustainVis;
+					curRenderedSustains.add(i.noteCharterObject);
+				}
+			}
 	}
 
 	public var shownNotes:Array<Note> = [];
@@ -1830,6 +1871,8 @@ class ChartingState extends MusicBeatState
 				{
 					@:privateAccess
 					{
+					#if desktop
+          // The __backend.handle attribute is only available on native.
 						lime.media.openal.AL.sourcef(FlxG.sound.music._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, speed);
 						try
 						{
@@ -1841,10 +1884,10 @@ class ChartingState extends MusicBeatState
 							}
 						}
 						catch(e)
-						{
-							// trace("failed to pitch vocals (probably cuz they don't exist)");
-						}
-			
+							{
+								// trace("failed to pitch vocals (probably cuz they don't exist)");
+							}
+							  #end
 					}	
 				}
 			}
@@ -1855,15 +1898,10 @@ class ChartingState extends MusicBeatState
 					if (diff < 8000 && diff >= -8000)
 					{
 						shownNotes.push(note);
-						note.y = getYfromStrum(note.strumTime) * zoomFactor;
 						if (note.sustainLength > 0)
 						{
-							if (note.noteCharterObject != null)
-							if (note.noteCharterObject.y != note.y + GRID_SIZE)
-							{
-								note.noteCharterObject.y = note.y + GRID_SIZE;
-								note.noteCharterObject.makeGraphic(8,Math.floor((getYfromStrum(note.strumTime + note.sustainLength) * zoomFactor) - note.y),FlxColor.WHITE);
-							}
+							note.noteCharterObject.active = true;
+							note.noteCharterObject.visible = true;
 						}
 						note.active = true;
 						note.visible = true;
@@ -2492,6 +2530,21 @@ class ChartingState extends MusicBeatState
 			FlxG.sound.music.stop();
 			if (!PlayState.isSM)
 			vocals.stop();
+			
+			while (curRenderedNotes.members.length > 0)
+				{
+					curRenderedNotes.remove(curRenderedNotes.members[0], true);
+				}
+
+			while (curRenderedSustains.members.length > 0)
+				{
+					curRenderedSustains.remove(curRenderedSustains.members[0], true);
+				}
+		
+			while (sectionRenderes.members.length > 0)
+				{
+					sectionRenderes.remove(sectionRenderes.members[0], true);
+				}
 			LoadingState.loadAndSwitchState(new PlayState());
 		}
 
@@ -2672,6 +2725,8 @@ class ChartingState extends MusicBeatState
 
 				if (curSelectedNoteObject.noteCharterObject != null)
 					curRenderedSustains.remove(curSelectedNoteObject.noteCharterObject);
+				
+				remove(curSelectedNoteObject.noteCharterObject);
 
 				var sustainVis:FlxSprite = new FlxSprite(curSelectedNoteObject.x + (GRID_SIZE / 2),
 				curSelectedNoteObject.y + GRID_SIZE).makeGraphic(8, Math.floor((getYfromStrum(curSelectedNoteObject.strumTime + curSelectedNote[2]) * zoomFactor) - curSelectedNoteObject.y));
@@ -3328,12 +3383,91 @@ class ChartingState extends MusicBeatState
 			case 'Lost-Remix': format = 'Lostremix';
 		}
 		PlayState.SONG = Song.loadFromJson(format + difficultyArray[PlayState.storyDifficulty], format);
+		
+		while (curRenderedNotes.members.length > 0)
+			{
+				curRenderedNotes.remove(curRenderedNotes.members[0], true);
+			}
+
+			while (curRenderedSustains.members.length > 0)
+			{
+				curRenderedSustains.remove(curRenderedSustains.members[0], true);
+			}
+
+			while (sectionRenderes.members.length > 0)
+			{
+				sectionRenderes.remove(sectionRenderes.members[0], true);
+			}
+
+			while (sectionRenderes.members.length > 0)
+			{
+				sectionRenderes.remove(sectionRenderes.members[0], true);
+			}
+			var toRemove = [];
+
+			for (i in _song.notes)
+			{
+				if (i.startTime > FlxG.sound.music.length)
+					toRemove.push(i);
+			}
+	
+			for (i in toRemove)
+				_song.notes.remove(i);
+	
+			toRemove = []; // clear memory
 		LoadingState.loadAndSwitchState(new ChartingState());
 	}
 
 	function loadAutosave():Void
 	{
+		while (curRenderedNotes.members.length > 0)
+			{
+				curRenderedNotes.remove(curRenderedNotes.members[0], true);
+			}
+
+			while (curRenderedSustains.members.length > 0)
+			{
+				curRenderedSustains.remove(curRenderedSustains.members[0], true);
+			}
+			var toRemove = [];
+
+			for (i in _song.notes)
+			{
+				if (i.startTime > FlxG.sound.music.length)
+					toRemove.push(i);
+			}
+	
+			for (i in toRemove)
+				_song.notes.remove(i);
+	
+			toRemove = []; // clear memory
 		PlayState.SONG = Song.parseJSONshit(FlxG.save.data.autosave);
+		while (curRenderedNotes.members.length > 0)
+			{
+				curRenderedNotes.remove(curRenderedNotes.members[0], true);
+			}
+
+			while (curRenderedSustains.members.length > 0)
+			{
+				curRenderedSustains.remove(curRenderedSustains.members[0], true);
+			}
+			
+			while (sectionRenderes.members.length > 0)
+			{
+				sectionRenderes.remove(sectionRenderes.members[0], true);
+			}
+			var toRemove = [];
+
+			for (i in _song.notes)
+			{
+				if (i.startTime > FlxG.sound.music.length)
+					toRemove.push(i);
+			}
+	
+			for (i in toRemove)
+				_song.notes.remove(i);
+	
+			toRemove = []; // clear memory
 		LoadingState.loadAndSwitchState(new ChartingState());
 	}
 
@@ -3348,6 +3482,20 @@ class ChartingState extends MusicBeatState
 	private function saveLevel()
 	{
 		var difficultyArray:Array<String> = ["-easy", "", "-hard"];
+
+		var toRemove = [];
+
+		for (i in _song.notes)
+		{
+			if (i.startTime > FlxG.sound.music.length)
+				toRemove.push(i);
+		}
+
+		for (i in toRemove)
+			_song.notes.remove(i);
+
+		toRemove = []; // clear memory
+
 		var json = {
 			"song": _song
 		};
