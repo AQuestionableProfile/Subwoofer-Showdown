@@ -3788,13 +3788,6 @@ class PlayState extends MusicBeatState
 				comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.7));
 				comboSpr.antialiasing = FlxG.save.data.antialiasing;
 			}
-			else if (SONG.noteStyle != 'doom')
-			{
-				rating.setGraphicSize(Std.int(rating.width * 0.0));
-				rating.antialiasing = FlxG.save.data.antialiasing;
-				comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.0));
-				comboSpr.antialiasing = FlxG.save.data.antialiasing;
-			}
 			else
 			{
 				rating.setGraphicSize(Std.int(rating.width * daPixelZoom * 0.7));
@@ -3844,11 +3837,6 @@ class PlayState extends MusicBeatState
 				{
 					numScore.antialiasing = FlxG.save.data.antialiasing;
 					numScore.setGraphicSize(Std.int(numScore.width * 0.5));
-				}
-				else if (SONG.noteStyle != 'doom')
-				{
-					numScore.antialiasing = FlxG.save.data.antialiasing;
-					numScore.setGraphicSize(Std.int(numScore.width * 0));
 				}
 				else
 				{
