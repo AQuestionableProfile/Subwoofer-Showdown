@@ -14,13 +14,15 @@ class Character extends FlxSprite
 
 	public var isPlayer:Bool = false;
 	public var curCharacter:String = 'bf';
+	public var barColor:Int;
 
 	public var holdTimer:Float = 0;
 
 	public function new(x:Float, y:Float, ?character:String = "bf", ?isPlayer:Bool = false)
 	{
 		super(x, y);
-
+		
+		barColor = isPlayer ? 0xFF66FF33 : 0xFFFF0000;
 		animOffsets = new Map<String, Array<Dynamic>>();
 		curCharacter = character;
 		this.isPlayer = isPlayer;
@@ -47,6 +49,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('scared', 'GF FEAR', 24);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFa5004d;
 
 				playAnim('danceRight');
 
@@ -66,6 +69,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('scared', 'GF FEAR', 24);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFa5004d;
 
 				playAnim('danceRight');
 
@@ -107,6 +111,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFaf66ce;
 
 				playAnim('idle');
 			case 'spooky':
@@ -120,6 +125,7 @@ class Character extends FlxSprite
 				animation.addByIndices('danceRight', 'spooky dance idle', [8, 10, 12, 14], "", 12, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFd57e00;
 
 				playAnim('danceRight');
 			case 'mom':
@@ -135,6 +141,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFd8558e;
 
 				playAnim('idle');
 
@@ -152,6 +159,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFd8558e;
 
 				playAnim('idle');
 			case 'monster':
@@ -164,6 +172,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Monster Right note', 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFf3ff6e;
+				
 				playAnim('idle');
 			case 'monster-christmas':
 				tex = Paths.getSparrowAtlas('monsterChristmas','shared',true);
@@ -175,6 +185,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Monster Right note', 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFf3ff6e;
+
 				playAnim('idle');
 			case 'pico':
 				tex = Paths.getSparrowAtlas('Pico_FNF_assetss','shared',true);
@@ -202,6 +214,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWNmiss', 'Pico Down Note MISS', 24);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFb7d855;
 
 				playAnim('idle');
 
@@ -323,6 +336,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'SENPAI DOWN NOTE', 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFffaa6f;
 
 				playAnim('idle');
 
@@ -339,6 +353,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Angry Senpai DOWN NOTE', 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFffaa6f;
 				playAnim('idle');
 
 				setGraphicSize(Std.int(width * 6));
@@ -355,6 +370,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', "spirit down_", 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFff3c6e;
 
 				setGraphicSize(Std.int(width * 6));
 				updateHitbox();
@@ -378,6 +394,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT-alt', 'Parent Right Note Mom', 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFF9a00f8;
 
 				playAnim('idle');
 
@@ -390,6 +407,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Maggie Pose Left', 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFffb3e5;
 
 				playAnim('idle');
 			case 'bf-doom':
@@ -444,6 +462,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('scared', 'GF FEAR', 24);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFa5004d;
 
 				playAnim('danceRight');
 			case 'maggie-doom':
@@ -455,6 +474,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'MaggieD Pose Left', 24, false);
 
 				loadOffsetFile(curCharacter);
+				barColor = 0xFFffb3e5;
 
 				playAnim('idle');
 			//comment this out soon in case this breaks something.
@@ -488,6 +508,10 @@ class Character extends FlxSprite
 				playAnim('idle');
 				flipX = true;*/
 		}
+
+		if (curCharacter.startsWith('bf'))
+			barColor = 0xFF31b0d1;
+
 
 		dance();
 
@@ -527,7 +551,7 @@ class Character extends FlxSprite
 
 	override function update(elapsed:Float)
 	{
-		if (!curCharacter.startsWith('bf'))
+		if (!isPlayer)
 		{
 			if (animation.curAnim.name.startsWith('sing'))
 			{
