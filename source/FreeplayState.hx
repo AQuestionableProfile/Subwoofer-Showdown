@@ -241,7 +241,7 @@ class FreeplayState extends MusicBeatState
 		diffCalcText.font = scoreText.font;
 		add(diffCalcText);
 
-		previewtext = new FlxText(scoreText.x, scoreText.y + 94, 0, "Rate: " + rate + "x", 24);
+		previewtext = new FlxText(scoreText.x, scoreText.y + 94, 0, "Rate: " + FlxMath.roundDecimal(rate, 2) + "x", 24);
 		previewtext.font = scoreText.font;
 		add(previewtext);
 
@@ -329,6 +329,7 @@ class FreeplayState extends MusicBeatState
 		var upP = FlxG.keys.justPressed.UP;
 		var downP = FlxG.keys.justPressed.DOWN;
 		var accepted = FlxG.keys.justPressed.ENTER;
+		var charting = FlxG.keys.justPressed.SEVEN;
 
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 
@@ -392,7 +393,7 @@ class FreeplayState extends MusicBeatState
 				diffCalcText.text = 'RATING: ${DiffCalc.CalculateDiff(songData.get(songs[curSelected].songName)[curDifficulty])}';
 			}
 
-			previewtext.text = "Rate: " + rate + "x";
+			previewtext.text = "Rate: " + FlxMath.roundDecimal(rate, 2) + "x";
 		}
 		else
 		{
@@ -417,6 +418,12 @@ class FreeplayState extends MusicBeatState
 		}
 
 		if (accepted)
+			loadSong();
+		else if (charting)
+			loadSong(true);
+	}
+	
+		function loadSong(isCharting:Bool = false)
 		{
 			// adjusting the song name to be compatible
 			var songFormat = StringTools.replace(songs[curSelected].songName, " ", "-");
@@ -430,10 +437,10 @@ class FreeplayState extends MusicBeatState
 			}
 			var hmm;
 			try
-			{
-				hmm = songData.get(songs[curSelected].songName)[curDifficulty];
-				if (hmm == null)
-					return;
+			{	
+			hmm = songData.get(songs[curSelected].songName)[curDifficulty];
+			if (hmm == null)
+				return;
 			}
 			catch(ex)
 			{
@@ -455,17 +462,20 @@ class FreeplayState extends MusicBeatState
 					PlayState.pathToSm = songs[curSelected].path;
 				}
 			else
-				PlayState.isSM = false;
+			PlayState.isSM = false;
 			#else
 			PlayState.isSM = false;
 			#end
 
 			PlayState.songMultiplier = rate;
 
+			if (isCharting)
+				LoadingState.loadAndSwitchState(new ChartingState());
+			else
+
 			LoadingState.loadAndSwitchState(new PlayState());
 
 			clean();
-		}
 	}
 
 	function changeDiff(change:Int = 0)

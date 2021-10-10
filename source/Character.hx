@@ -477,6 +477,48 @@ class Character extends FlxSprite
 				barColor = 0xFFffb3e5;
 
 				playAnim('idle');
+			/*
+			case 'maggie-ex':
+				frames = Paths.getSparrowAtlas('MaggieExplosion', 'shared', true);
+				animation.addByPrefix('idle', "Maggie Idle", 24, false);
+				animation.addByPrefix('idle-alt', "Maggie Ex Idle Alt", 24, false);
+				animation.addByPrefix('singUP', "Maggie Up Pose", 24, false);
+				animation.addByPrefix('singDOWN', "MAGGIE DOWN POSE", 24, false);
+				animation.addByPrefix('singLEFT', 'Maggie Left Pose', 24, false);
+				animation.addByPrefix('singRIGHT', 'Maggie Pose Left', 24, false);
+				animation.addByIndices('singRIGHT-alt', 'Maggie Ex Pose Left Alt', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], "", 24, false);
+
+				loadOffsetFile(curCharacter);
+				barColor = 0xFFffb3e5;
+
+				playAnim('idle');
+			case 'bf-ex':
+				var tex = Paths.getSparrowAtlas('BoyFriend_AssetsEx','shared',true);
+				frames = tex;
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+				animation.addByIndices('haha', 'boyfriend dodge funny', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91], "", 24, false);
+
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, false);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+
+				flipX = true;
+			*/				
 			//comment this out soon in case this breaks something.
 			//gonna keep this here for anyone snooping in the source code.
 			//for real, sayonara tankman.
@@ -565,9 +607,12 @@ class Character extends FlxSprite
 
 			if (curCharacter == 'dad')
 				dadVar = 6.1;
+			else if (curCharacter == 'gf' || curCharacter == 'spooky')
+				dadVar = 4.1; //fix double dances
 			if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
 			{
-				trace('dance');
+				if (curCharacter == 'gf' || curCharacter == 'spooky')
+					playAnim('danceLeft'); //overridden by dance correctly later
 				dance();
 				holdTimer = 0;
 			}
@@ -605,12 +650,28 @@ class Character extends FlxSprite
 							playAnim('danceLeft');
 					}
 				case 'spooky':
-					danced = !danced;
-
-					if (danced)
-						playAnim('danceRight');
-					else
-						playAnim('danceLeft');
+					if (!animation.curAnim.name.startsWith('sing'))
+						{
+							danced = !danced;
+							if (danced)
+								playAnim('danceRight');
+							else
+								playAnim('danceLeft');
+						}
+				/*case 'maggie-ex':
+					if (!animation.curAnim.name.endsWith('RIGHT-alt'))
+						playAnim('idle', forced);
+				case 'bf-ex':
+					if (!animation.curAnim.name.endsWith('haha'))
+						playAnim('idle', forced);
+				*/
+					/*
+					// new dance code is gonna end up cutting off animation with the idle
+					// so here's example code that'll fix it. just adjust it to ya character 'n shit
+					case 'custom character':
+						if (!animation.curAnim.name.endsWith('custom animation'))
+						playAnim('idle', forced);
+					*/
 				default:
 					if (altAnim && animation.getByName('idle-alt') != null)
 						playAnim('idle-alt', forced);
