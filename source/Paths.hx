@@ -100,8 +100,6 @@ class Paths
 	{
 		var songLowercase = StringTools.replace(song, " ", "-").toLowerCase();
 			switch (songLowercase) {
-				case 'dad-battle': songLowercase = 'dadbattle';
-				case 'philly-nice': songLowercase = 'philly';
 				case 'jazz-cup': songLowercase = 'jazzcup';
 				case 'jazz-cup-remix': songLowercase = 'jazzcupremix';
 				case 'neon-remix': songLowercase = 'neonremix';
@@ -114,8 +112,6 @@ class Paths
 	{
 		var songLowercase = StringTools.replace(song, " ", "-").toLowerCase();
 			switch (songLowercase) {
-				case 'dad-battle': songLowercase = 'dadbattle';
-				case 'philly-nice': songLowercase = 'philly';
 				case 'jazz-cup': songLowercase = 'jazzcup';
 				case 'jazz-cup-remix': songLowercase = 'jazzcupremix';
 				case 'neon-remix': songLowercase = 'neonremix';

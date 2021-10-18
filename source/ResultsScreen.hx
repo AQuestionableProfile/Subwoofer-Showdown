@@ -202,8 +202,6 @@ class ResultsScreen extends FlxSubState
 
 			var songHighscore = StringTools.replace(PlayState.SONG.song, " ", "-");
 			switch (songHighscore) {
-				case 'Dad-Battle': songHighscore = 'Dadbattle';
-				case 'Philly-Nice': songHighscore = 'Philly';
                 case 'Jazz-Cup': songHighscore = 'Jazzcup';
                 case 'Jazz-Cup-Remix': songHighscore = 'Jazzcupremix';
                 case 'Neon-Remix': songHighscore = 'Neonremix';
@@ -235,8 +233,6 @@ class ResultsScreen extends FlxSubState
 
 			var songHighscore = StringTools.replace(PlayState.SONG.song, " ", "-");
 			switch (songHighscore) {
-				case 'Dad-Battle': songHighscore = 'Dadbattle';
-				case 'Philly-Nice': songHighscore = 'Philly';
                 case 'Jazz-Cup': songHighscore = 'Jazzcup';
                 case 'Jazz-Cup-Remix': songHighscore = 'Jazzcupremix';
                 case 'Neon-Remix': songHighscore = 'Neonremix';

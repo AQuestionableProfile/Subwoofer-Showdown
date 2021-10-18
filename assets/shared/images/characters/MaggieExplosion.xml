@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MaggieExplosion.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MAGGIE DOWN POSE0000" x="0" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0001" x="0" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0002" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0003" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0004" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0005" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0006" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0007" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0008" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0009" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0010" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0011" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0012" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0013" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="MAGGIE DOWN POSE0014" x="444" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0000" x="888" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0001" x="888" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0002" x="1332" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0003" x="1332" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0004" x="1776" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0005" x="1776" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0006" x="2220" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0007" x="2220" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0008" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0009" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0010" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0011" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0012" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Idle0013" x="2664" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Ex Idle Alt0000" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0001" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0002" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0003" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0004" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0005" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0006" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0007" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0008" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0009" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0010" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0011" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0012" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Idle Alt0013" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Left Pose0000" x="3924" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Left Pose0001" x="3924" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Left Pose0002" x="4368" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Left Pose0003" x="4368" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Left Pose0004" x="4368" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Left Pose0005" x="4368" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Left Pose0006" x="4368" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Left Pose0007" x="4368" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Left Pose0008" x="4368" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Left Pose0009" x="4368" y="0" width="444" height="806"/>
+	<SubTexture name="Maggie Pose Left0000" x="4812" y="0" width="502" height="807"/>
+	<SubTexture name="Maggie Pose Left0001" x="4812" y="0" width="502" height="807"/>
+	<SubTexture name="Maggie Pose Left0002" x="5314" y="0" width="502" height="807"/>
+	<SubTexture name="Maggie Pose Left0003" x="5314" y="0" width="502" height="807"/>
+	<SubTexture name="Maggie Pose Left0004" x="5314" y="0" width="502" height="807"/>
+	<SubTexture name="Maggie Pose Left0005" x="5314" y="0" width="502" height="807"/>
+	<SubTexture name="Maggie Pose Left0006" x="5314" y="0" width="502" height="807"/>
+	<SubTexture name="Maggie Pose Left0007" x="5314" y="0" width="502" height="807"/>
+	<SubTexture name="Maggie Pose Left0008" x="5314" y="0" width="502" height="807"/>
+	<SubTexture name="Maggie Pose Left0009" x="5314" y="0" width="502" height="807"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0000" x="5816" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0001" x="6632" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0002" x="0" y="859" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0003" x="816" y="859" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0004" x="1632" y="859" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0005" x="2448" y="859" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0006" x="3264" y="859" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0007" x="4080" y="859" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0008" x="4896" y="859" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0009" x="5712" y="859" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0010" x="6528" y="859" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0011" x="7344" y="859" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0012" x="0" y="1718" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0013" x="816" y="1718" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0014" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0015" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0016" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0017" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0018" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0019" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0020" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0021" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0022" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Ex Pose Left Alt0023" x="3108" y="0" width="816" height="859"/>
+	<SubTexture name="Maggie Up Pose0000" x="1632" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0001" x="1632" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0002" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0003" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0004" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0005" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0006" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0007" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0008" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0009" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0010" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0011" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0012" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0013" x="2134" y="1718" width="502" height="806"/>
+	<SubTexture name="Maggie Up Pose0014" x="2134" y="1718" width="502" height="806"/>
+</TextureAtlas>

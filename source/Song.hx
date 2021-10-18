@@ -83,8 +83,6 @@ class Song
 		// pre lowercasing the folder name
 		var folderLowercase = StringTools.replace(folder, " ", "-").toLowerCase();
 		switch (folderLowercase) {
-			case 'dad-battle': folderLowercase = 'dadbattle';
-			case 'philly-nice': folderLowercase = 'philly';
 			case 'jazz-cup': folderLowercase = 'jazzcup';
 			case 'jazz-cup-remix': folderLowercase = 'jazzcupremix';
 			case 'neon-remix': folderLowercase = 'neonremix';

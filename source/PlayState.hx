@@ -325,10 +325,6 @@ class PlayState extends MusicBeatState
 		var songLowercase = StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase();
 		switch (songLowercase)
 		{
-			case 'dad-battle':
-				songLowercase = 'dadbattle';
-			case 'philly-nice':
-				songLowercase = 'philly';
 			case 'jazz-cup':
 				songLowercase = 'jazzcup';
 			case 'jazz-cup-remix':
@@ -476,7 +472,7 @@ class PlayState extends MusicBeatState
 		switch(songLowercase)
 		{
 			//if the song has dialogue, so we don't accidentally try to load a nonexistant file and crash the game
-			case 'senpai' | 'roses' | 'thorns' | 'jazzcup' | 'neon' | 'lost' | 'jazzcupremix' | 'neonremix' | 'lostremix':
+			case 'jazzcup' | 'neon' | 'lost' | 'jazzcupremix' | 'neonremix' | 'lostremix':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/$songLowercase/dialogue'));
 		}
 
@@ -487,30 +483,6 @@ class PlayState extends MusicBeatState
 		{
 			switch (storyWeek)
 			{
-				case 2:
-					stageCheck = 'halloween';
-				case 3:
-					stageCheck = 'philly';
-				case 4:
-					stageCheck = 'limo';
-				case 5:
-					if (songLowercase == 'winter-horrorland')
-					{
-						stageCheck = 'mallEvil';
-					}
-					else
-					{
-						stageCheck = 'mall';
-					}
-				case 6:
-					if (songLowercase == 'thorns')
-					{
-						stageCheck = 'schoolEvil';
-					}
-					else
-					{
-						stageCheck = 'school';
-					}
 				case 2:
 					if (songLowercase == 'neon')
 					{
@@ -733,10 +705,6 @@ class PlayState extends MusicBeatState
 		var songLowercase = StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase();
 		switch (songLowercase)
 		{
-			case 'dad-battle':
-				songLowercase = 'dadbattle';
-			case 'philly-nice':
-				songLowercase = 'philly';
 			case 'jazz-cup':
 				songLowercase = 'jazzcup';
 			case 'jazz-cup-remix':
@@ -959,7 +927,7 @@ class PlayState extends MusicBeatState
 		{
 			switch (StringTools.replace(curSong, " ", "-").toLowerCase())
 			{
-				case "winter-horrorland":
+				/*case "winter-horrorland":
 					var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 					add(blackScreen);
 					blackScreen.scrollFactor.set();
@@ -986,7 +954,7 @@ class PlayState extends MusicBeatState
 								}
 							});
 						});
-					});
+					});*/
 				case "neon":
 					var blackScreen:FlxSprite = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 4), Std.int(FlxG.height * 4), FlxColor.BLACK);
 					add(blackScreen);
@@ -1043,13 +1011,13 @@ class PlayState extends MusicBeatState
 						schoolIntro(doof);
 						camHUD.visible = true;
 					});
-				case 'senpai':
+				/*case 'senpai':
 					schoolIntro(doof);
 				case 'roses':
 					FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 				case 'thorns':
-					schoolIntro(doof);
+					schoolIntro(doof);*/
 				case 'jazz-cup':
 					schoolIntro(doof);
 				case 'jazz-cup-remix':
@@ -1694,10 +1662,6 @@ class PlayState extends MusicBeatState
 		var songLowercase = StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase();
 		switch (songLowercase)
 		{
-			case 'dad-battle':
-				songLowercase = 'dadbattle';
-			case 'philly-nice':
-				songLowercase = 'philly';
 			case 'jazz-cup':
 				songLowercase = 'jazzcup';
 			case 'jazz-cup-remix':
@@ -3357,10 +3321,6 @@ class PlayState extends MusicBeatState
 			var songHighscore = StringTools.replace(PlayState.SONG.song, " ", "-");
 			switch (songHighscore)
 			{
-				case 'Dad-Battle':
-					songHighscore = 'Dadbattle';
-				case 'Philly-Nice':
-					songHighscore = 'Philly';
 				case 'Jazz-Cup':
 					songHighscore = 'Jazzcup';
 				case 'Jazz-Cup-Remix':
@@ -3464,10 +3424,6 @@ class PlayState extends MusicBeatState
 					var songFormat = StringTools.replace(PlayState.storyPlaylist[0], " ", "-");
 					switch (songFormat)
 					{
-						case 'Dad-Battle':
-							songFormat = 'Dadbattle';
-						case 'Philly-Nice':
-							songFormat = 'Philly';
 						case 'Jazz-Cup':
 							songFormat = 'Jazzcup';
 						case 'Jazz-Cup-Remix':

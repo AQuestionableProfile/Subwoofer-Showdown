@@ -351,8 +351,6 @@ class StoryMenuState extends MusicBeatState
 			// adjusting the song name to be compatible
 			var songFormat = StringTools.replace(PlayState.storyPlaylist[0], " ", "-");
 			switch (songFormat) {
-				case 'Dad-Battle': songFormat = 'Dadbattle';
-				case 'Philly-Nice': songFormat = 'Philly';
 				case 'Jazz-Cup': songFormat = 'Jazzcup';
 				case 'Jazz-Cup-Remix': songFormat = 'Jazzcupremix';
 				case 'Neon-Remix': songFormat = 'Neonremix';

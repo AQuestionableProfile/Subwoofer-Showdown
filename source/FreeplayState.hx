@@ -84,8 +84,6 @@ class FreeplayState extends MusicBeatState
 			var meta = new SongMetadata(data[0], Std.parseInt(data[2]), data[1]);
 			var format = StringTools.replace(meta.songName, " ", "-");
 			switch (format) {
-				case 'Dad-Battle': format = 'Dadbattle';
-				case 'Philly-Nice': format = 'Philly';
 				case 'Jazz-Cup': format = 'Jazzcup';
 				case 'Jazz-Cup-Remix': format = 'Jazzcupremix';
 				case 'Neon-Remix': format = 'Neonremix';
@@ -428,8 +426,6 @@ class FreeplayState extends MusicBeatState
 			// adjusting the song name to be compatible
 			var songFormat = StringTools.replace(songs[curSelected].songName, " ", "-");
 			switch (songFormat) {
-				case 'Dad-Battle': songFormat = 'Dadbattle';
-				case 'Philly-Nice': songFormat = 'Philly';
 				case 'Jazz-Cup': songFormat = 'Jazzcup';
 				case 'Jazz-Cup-Remix': songFormat = 'Jazzcupremix';
 				case 'Neon-Remix': songFormat = 'Neonremix';
@@ -494,8 +490,6 @@ class FreeplayState extends MusicBeatState
 		// adjusting the highscore song name to be compatible (changeDiff)
 		var songHighscore = StringTools.replace(songs[curSelected].songName, " ", "-");
 		switch (songHighscore) {
-			case 'Dad-Battle': songHighscore = 'Dadbattle';
-			case 'Philly-Nice': songHighscore = 'Philly';
 			case 'Jazz-Cup': songHighscore = 'Jazzcup';
 			case 'Jazz-Cup-Remix': songHighscore = 'Jazzcupremix';
 			case 'Neon-Remix': songHighscore = 'Neonremix';
@@ -547,8 +541,6 @@ class FreeplayState extends MusicBeatState
 		// would read original scores if we didn't change packages
 		var songHighscore = StringTools.replace(songs[curSelected].songName, " ", "-");
 		switch (songHighscore) {
-			case 'Dad-Battle': songHighscore = 'Dadbattle';
-			case 'Philly-Nice': songHighscore = 'Philly';
 			case 'Jazz-Cup': songHighscore = 'Jazzcup';
 			case 'Jazz-Cup-Remix': songHighscore = 'Jazzcupremix';
 			case 'Neon-Remix': songHighscore = 'Neonremix';

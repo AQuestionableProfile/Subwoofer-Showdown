@@ -177,8 +177,6 @@ class ChartingState extends MusicBeatState
 			}else{
 				var songFormat = StringTools.replace(PlayState.SONG.song, " ", "-");
 				switch (songFormat) {
-					case 'Dad-Battle': songFormat = 'Dadbattle';
-					case 'Philly-Nice': songFormat = 'Philly';
 					case 'Jazz-Cup': songFormat = 'Jazzcup';
 					case 'Jazz-Cup-Remix': songFormat = 'Jazzcupremix';
 					case 'Neon-Remix': songFormat = 'Neonremix';
@@ -1509,8 +1507,6 @@ class ChartingState extends MusicBeatState
 		{
 			var songFormat = StringTools.replace(PlayState.SONG.song, " ", "-");
 			switch (songFormat) {
-				case 'Dad-Battle': songFormat = 'Dadbattle';
-				case 'Philly-Nice': songFormat = 'Philly';
 				case 'Jazz-Cup': songFormat = 'Jazzcup';
 				case 'Jazz-Cup-Remix': songFormat = 'Jazzcupremix';
 				case 'Neon-Remix': songFormat = 'Neonremix';
@@ -3375,8 +3371,6 @@ class ChartingState extends MusicBeatState
 		var difficultyArray:Array<String> = ["-easy", "", "-hard"];
 		var format = StringTools.replace(PlayState.SONG.song.toLowerCase(), " ", "-");
 		switch (format) {
-			case 'Dad-Battle': format = 'Dadbattle';
-			case 'Philly-Nice': format = 'Philly';
 			case 'Jazz-Cup': format = 'Jazzcup';
 			case 'Jazz-Cup-Remix': format = 'Jazzcupremix';
 			case 'Neon-Remix': format = 'Neonremix';

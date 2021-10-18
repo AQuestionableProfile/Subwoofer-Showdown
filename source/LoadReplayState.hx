@@ -46,18 +46,9 @@ class LoadReplayState extends MusicBeatState
 
         controlsStrings.sort(sortByDate);
 
-        addWeek(['Bopeebo', 'Fresh', 'Dadbattle'], 1, ['dad']);
-        addWeek(['Spookeez', 'South', 'Monster'], 2, ['spooky']);
-        addWeek(['Pico', 'Philly', 'Blammed'], 3, ['pico']);
+		addWeek(['JazzCup', 'Neon', 'Lost'], 1, ['maggie', 'maggie', 'maggie']);
 
-        addWeek(['Satin-Panties', 'High', 'Milf'], 4, ['mom']);
-        addWeek(['Cocoa', 'Eggnog', 'Winter-Horrorland'], 5, ['parents-christmas', 'parents-christmas', 'monster-christmas']);
-        
-        addWeek(['Senpai', 'Roses', 'Thorns'], 6, ['senpai', 'senpai', 'spirit']);
-
-		addWeek(['JazzCup', 'Neon', 'Lost'], 7, ['maggie', 'maggie', 'maggie']);
-
-		addWeek(['JazzCupRemix', 'NeonRemix', 'LostRemix'], 8, ['maggie-doom', 'maggie-doom', 'maggie-doom']);
+		addWeek(['JazzCupRemix', 'NeonRemix', 'LostRemix'], 2, ['maggie-doom', 'maggie-doom', 'maggie-doom']);
 
 
         for(i in 0...controlsStrings.length)
@@ -172,15 +163,11 @@ class LoadReplayState extends MusicBeatState
 					// adjusting the song name to be compatible
 					var songFormat = StringTools.replace(PlayState.rep.replay.songName, " ", "-");
 					switch (songFormat) {
-						case 'Dad-Battle': songFormat = 'Dadbattle';
-						case 'Philly-Nice': songFormat = 'Philly';
 						case 'Jazz-Cup': songFormat = 'Jazzcup';
 						case 'Jazz-Cup-Remix': songFormat = 'Jazzcupremix';
 						case 'Neon-Remix': songFormat = 'Neonremix';
 						case 'Lost-Remix': songFormat = 'Lostremix';
 						// Replay v1.0 support
-						case 'dad-battle': songFormat = 'Dadbattle';
-						case 'philly-nice': songFormat = 'Philly';
 						case 'jazz-cup': songFormat = 'Jazzcup';
 						case 'jazz-cup-remix': songFormat = 'Jazzcupremix';
 						case 'neon-remix': songFormat = 'Neonremix';

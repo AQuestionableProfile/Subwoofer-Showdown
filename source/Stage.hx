@@ -32,7 +32,7 @@ class Stage extends MusicBeatState
 	// All of the above must be set or used in your stage case code block!!
 
 	public var positions:Map<String, Map<String, Array<Int>>> = [ // Assign your characters positions on stage here!
-		'halloween' => [
+		/*'halloween' => [
 			'spooky' => [100, 300],
 			'monster' => [100, 200]
 		],
@@ -60,7 +60,7 @@ class Stage extends MusicBeatState
 			'gf-pixel' => [580, 430],
 			'bf-pixel' => [970, 670],
 			'spirit' => [-50, 200]
-		]
+		]*/
 	];
 
 
@@ -73,7 +73,7 @@ class Stage extends MusicBeatState
 
         switch(daStage)
         {
-            case 'halloween':
+            /*case 'halloween':
 					{
 
 						var hallowTex = Paths.getSparrowAtlas('halloween_bg', 'week2');
@@ -218,7 +218,7 @@ class Stage extends MusicBeatState
 							swagBacks['dancer3'],
 							swagBacks['dancer4']
 						];
-					}*/
+					}*'/ //Remove ' from the ends of these.
 					}
 				case 'mall':
 					{
@@ -446,8 +446,8 @@ class Stage extends MusicBeatState
 							// waveSpriteFG.updateHitbox();
 							add(waveSprite);
 							add(waveSpriteFG);
-						 */
-					}
+						 *'/
+					}*/
 			case 'ppmall':
 			{
 				camZoom = 0.9;
@@ -571,7 +571,7 @@ class Stage extends MusicBeatState
 		{
 			super.update(elapsed);
 	
-			if (!PlayStateChangeables.Optimize)
+			/*if (!PlayStateChangeables.Optimize)
 			{
 				switch (curStage)
 				{
@@ -588,7 +588,7 @@ class Stage extends MusicBeatState
 						}
 						// phillyCityLights.members[curLight].alpha -= (Conductor.crochet / 1000) * FlxG.elapsed;
 				}
-			}
+			}*/
 	
 		}
 	
@@ -596,7 +596,7 @@ class Stage extends MusicBeatState
 		{
 			super.stepHit();
 	
-			if (!PlayStateChangeables.Optimize)
+			/*if (!PlayStateChangeables.Optimize)
 			{
 				var array = slowBacks[curStep];
 				if (array != null && array.length > 0)
@@ -629,7 +629,7 @@ class Stage extends MusicBeatState
 				}
 	
 	
-			}
+			}*/
 		}
 	
 		override function beatHit()
@@ -642,7 +642,7 @@ class Stage extends MusicBeatState
 					bg.animation.play('idle', true);
 			}
 	
-			if (!PlayStateChangeables.Optimize)
+			/*if (!PlayStateChangeables.Optimize)
 			{
 				switch (curStage)
 				{
@@ -704,12 +704,12 @@ class Stage extends MusicBeatState
 	
 				}
 	
-			}
+			}*/
 	
 		}
 	
 		// Variables and Functions for Stages
-		var lightningStrikeBeat:Int = 0;
+		/*var lightningStrikeBeat:Int = 0;
 		var lightningOffset:Int = 8;
 		var curLight:Int = 0;
 	
@@ -816,6 +816,6 @@ class Stage extends MusicBeatState
 					resetFastCar();
 				});
 			}
-		}
+		}*/
 	
 }

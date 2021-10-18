@@ -128,8 +128,6 @@ class PauseSubState extends MusicBeatSubstate
 		// pre lowercasing the song name (update)
 		var songLowercase = StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase();
 		switch (songLowercase) {
-			case 'dad-battle': songLowercase = 'dadbattle';
-			case 'philly-nice': songLowercase = 'philly';
 			case 'jazz-cup': songLowercase = 'jazzcup';
 			case 'jazz-cup-remix': songLowercase = 'jazzcupremix';
 			case 'neon-remix': songLowercase = 'neonremix';
