@@ -1,10 +1,6 @@
-there used to be a Dog somewhere around here
-I guess it was trying to find its Mom.
-maybe I can catch it with a Net or something
-once I catch it, I'm gonna call it Lify.
-thinking about it, it sounds like a weird name for an App
+Have you ever been curious on what opening an image in Notepad looked liked?
+It just incomprehensible garbage with maybe a few lines of text actually forming words, lol.
+Try it out and see for yourself what a .png looks like in Notepad.
 
-proper capitalization of words and punctuation is key to having a grammatically-correct sentence (which this isn't)
-_ _ . _ _ . _
-
-^funny line (not morse code, lol)
+Since you're still here, let me tell you a fun fact about that that loading test image in "assets/images".
+When Cake originally made that drawing, he honestly didn't think about making a mod at all. "15% chance" if I remember correctly, I dunno.

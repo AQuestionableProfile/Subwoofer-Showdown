@@ -566,6 +566,8 @@ class FreeplayState extends MusicBeatState
 			sound.loadCompressedDataFromByteArray(bytes.getData(), bytes.length);
 			FlxG.sound.playMusic(sound);
 		}
+		if (songs[curSelected].songCharacter == "maggie-ex")
+			FlxG.sound.playMusic(Paths.voices(songs[curSelected].songName), 0);
 		else
 			FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
 		#end

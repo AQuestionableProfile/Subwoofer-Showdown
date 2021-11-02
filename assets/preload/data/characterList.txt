@@ -19,3 +19,5 @@ maggie
 bf-doom
 gf-doom
 maggie-doom
+bf-ex
+maggie-ex

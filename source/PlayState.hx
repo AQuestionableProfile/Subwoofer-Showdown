@@ -4522,17 +4522,17 @@ class PlayState extends MusicBeatState
 				boyfriend.playAnim('hey', true);
 			}
 			
-			/*if (curSong == 'Sandlers')
+			if (curSong == 'Sandlers')
 			{	
-				if (curBeat == 89)
+				if (curBeat == 7)
 				{		
 					boyfriend.playAnim('haha', true);
 				}
-				if (curBeat == 98)
+				if (curBeat == 14)
 				{		
 					health = 0;
 				}	
-			}*/
+			}
 
 			if (curBeat % 16 == 15 && SONG.song == 'Tutorial' && dad.curCharacter == 'gf' && curBeat > 16 && curBeat < 48)
 			{

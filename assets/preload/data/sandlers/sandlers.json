@@ -1,0 +1,110 @@
+{
+ "song": {
+  "player1": "bf-ex",
+  "gfVersion": "gf",
+  "notes": [
+   {
+    "sectionNotes": [
+     [
+      0,
+      3,
+      0,
+      true,
+      0
+     ]
+    ],
+    "lengthInSteps": 16,
+    "endTime": 1751.82481751825,
+    "CPUAltAnim": true,
+    "startTime": 0,
+    "mustHitSection": false
+   },
+   {
+    "sectionNotes": [],
+    "lengthInSteps": 16,
+    "endTime": 3503.6496350365,
+    "CPUAltAnim": true,
+    "startTime": 1751.82481751825,
+    "mustHitSection": true
+   },
+   {
+    "sectionNotes": [],
+    "lengthInSteps": 16,
+    "endTime": 5255.47445255474,
+    "CPUAltAnim": true,
+    "startTime": 3503.6496350365,
+    "mustHitSection": true
+   },
+   {
+    "sectionNotes": [],
+    "lengthInSteps": 16,
+    "endTime": 7007.29927007299,
+    "CPUAltAnim": true,
+    "startTime": 5255.47445255474,
+    "mustHitSection": true
+   },
+   {
+    "sectionNotes": [],
+    "lengthInSteps": 16,
+    "endTime": 8759.12408759124,
+    "CPUAltAnim": true,
+    "startTime": 7007.29927007299,
+    "mustHitSection": true
+   },
+   {
+    "sectionNotes": [],
+    "lengthInSteps": 16,
+    "endTime": 10510.9489051095,
+    "CPUAltAnim": true,
+    "startTime": 8759.12408759124,
+    "mustHitSection": true
+   },
+   {
+    "sectionNotes": [
+     [
+      11605.8394160584,
+      3,
+      0,
+      false,
+      26.5
+     ]
+    ],
+    "lengthInSteps": 16,
+    "endTime": 12262.7737226277,
+    "startTime": 10510.9489051095,
+    "mustHitSection": true
+   },
+   {
+    "sectionNotes": [],
+    "lengthInSteps": 16,
+    "endTime": 14014.598540146,
+    "startTime": 12262.7737226277,
+    "mustHitSection": true
+   },
+   {
+    "sectionNotes": [],
+    "lengthInSteps": 16,
+    "endTime": 15766.4233576642,
+    "startTime": 14014.598540146,
+    "mustHitSection": false
+   }
+  ],
+  "player2": "maggie-ex",
+  "eventObjects": [
+   {
+    "name": "Init BPM",
+    "position": 0,
+    "value": 137,
+    "type": "BPM Change"
+   }
+  ],
+  "chartVersion": "KE1",
+  "song": "Sandlers",
+  "validScore": true,
+  "needsVoices": true,
+  "stage": "ppmalln",
+  "bpm": 137,
+  "speed": 2.7,
+  "noteStyle": "normal"
+ }
+}

@@ -477,7 +477,6 @@ class Character extends FlxSprite
 				barColor = 0xFFffb3e5;
 
 				playAnim('idle');
-			/*
 			case 'maggie-ex':
 				frames = Paths.getSparrowAtlas('MaggieExplosion', 'shared', true);
 				animation.addByPrefix('idle', "Maggie Idle", 24, false);
@@ -517,8 +516,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-				flipX = true;
-			*/				
+				flipX = true;				
 			//comment this out soon in case this breaks something.
 			//gonna keep this here for anyone snooping in the source code.
 			//for real, sayonara tankman.
@@ -658,13 +656,12 @@ class Character extends FlxSprite
 							else
 								playAnim('danceLeft');
 						}
-				/*case 'maggie-ex':
+				case 'maggie-ex':
 					if (!animation.curAnim.name.endsWith('RIGHT-alt'))
 						playAnim('idle', forced);
 				case 'bf-ex':
 					if (!animation.curAnim.name.endsWith('haha'))
 						playAnim('idle', forced);
-				*/
 					/*
 					// new dance code is gonna end up cutting off animation with the idle
 					// so here's example code that'll fix it. just adjust it to ya character 'n shit
