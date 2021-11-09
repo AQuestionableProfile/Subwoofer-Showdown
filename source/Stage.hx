@@ -475,7 +475,7 @@ class Stage extends MusicBeatState
 			case 'ppmalld':
 			{
 				camZoom = 0.9;
-				var bg:FlxSprite = new FlxSprite(-550, -50).loadGraphic(Paths.image('fnfmallbg3'));
+				var bg:FlxSprite = new FlxSprite(-550, -4).loadGraphic(Paths.image('fnfmallbg3'));
 				bg.antialiasing = FlxG.save.data.antialiasing;
 				bg.scrollFactor.set(0.9, 0.9);
 				bg.active = false;
@@ -512,6 +512,18 @@ class Stage extends MusicBeatState
 			{
 				camZoom = 0.9;
 				var bg:FlxSprite = new FlxSprite(-550, -70).loadGraphic(Paths.image('gzmallbg3'));
+				bg.antialiasing = FlxG.save.data.antialiasing;
+				bg.scrollFactor.set(0.9, 0.9);
+				bg.active = false;
+				bg.setGraphicSize(Std.int(bg.width * 0.7));
+				bg.updateHitbox();
+				swagBacks['bg'] = bg;
+                toAdd.push(bg);
+			}
+			case 'palmmallS':
+			{
+				camZoom = 0.9;
+				var bg:FlxSprite = new FlxSprite(-550, -4).loadGraphic(Paths.image('sandlermall1'));
 				bg.antialiasing = FlxG.save.data.antialiasing;
 				bg.scrollFactor.set(0.9, 0.9);
 				bg.active = false;

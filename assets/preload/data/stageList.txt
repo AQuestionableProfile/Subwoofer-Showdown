@@ -5,3 +5,4 @@ ppmalld
 gzmall
 gzmalln
 gzmalld
+palmmallS
