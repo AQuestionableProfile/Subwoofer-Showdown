@@ -97,34 +97,34 @@ class DialogueBox extends FlxSpriteGroup
 
 			case 'jazz-cup':
 				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('meme/text_bubbles');
+				box.frames = Paths.getSparrowAtlas('dialogue stuff/text_bubbles');
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 			case 'neon':
 				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('meme/text_bubbles');
+				box.frames = Paths.getSparrowAtlas('dialogue stuff/text_bubbles');
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 			case 'lost':
 				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('meme/text_bubbles');
+				box.frames = Paths.getSparrowAtlas('dialogue stuff/text_bubbles');
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 			case 'jazz-cup-remix':
 				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('doom/text_bubbles');
+				box.frames = Paths.getSparrowAtlas('dialogue stuff/textD_bubbles');
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 				
 			case 'neon-remix':
 				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('doom/text_bubbles');
+				box.frames = Paths.getSparrowAtlas('dialogue stuff/textD_bubbles');
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 
 			case 'lost-remix':
 				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('doom/text_bubbles');
+				box.frames = Paths.getSparrowAtlas('dialogue stuff/textD_bubbles');
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 			//Didn't need to bring these here.
@@ -145,55 +145,11 @@ class DialogueBox extends FlxSpriteGroup
 		if (!hasDialog)
 			return;
 		
-		/*if (PlayState.SONG.song.toLowerCase()=='senpai' || PlayState.SONG.song.toLowerCase()=='roses' || PlayState.SONG.song.toLowerCase()=='thorns')
-			{
-				portraitLeft = new FlxSprite(-20, 40);
-				portraitLeft.frames = Paths.getSparrowAtlas('weeb/senpaiPortrait');
-				portraitLeft.animation.addByPrefix('enter', 'Senpai Portrait Enter', 24, false);
-				portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
-				portraitLeft.updateHitbox();
-				portraitLeft.scrollFactor.set();
-				add(portraitLeft);
-				portraitLeft.visible = false;
-	
-				portraitRight = new FlxSprite(0, 40);
-				portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortrait');
-				portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter', 24, false);
-				portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-				portraitRight.updateHitbox();
-				portraitRight.scrollFactor.set();
-				add(portraitRight);
-				portraitRight.visible = false;
-
-				//dummy code. DO NOT ATTEMPT TO LOAD THIS IN WEEK 6. (I don't even have the week set in StoryMenuState.hx)
-				//unused and it's safe to add Week 6 in story mode.
-				/*portraitRight2 = new FlxSprite(650, -90);
-				portraitRight2.frames = Paths.getSparrowAtlas('weeb/CakeWot');
-				portraitRight2.animation.addByPrefix('enter', 'Cake portrait enter', 24, false);
-				portraitRight2.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0));
-				portraitRight2.updateHitbox();
-				portraitRight2.scrollFactor.set();
-				add(portraitRight2);
-				portraitRight2.visible = false;*'/
-	
-				
-				box.animation.play('normalOpen');
-				box.setGraphicSize(Std.int(box.width * PlayState.daPixelZoom * 0.9));
-				box.updateHitbox();
-				add(box);
-	
-				box.screenCenter(X);
-				portraitLeft.screenCenter(X);
-	
-				handSelect = new FlxSprite(FlxG.width * 0.9, FlxG.height * 0.9).loadGraphic(Paths.image('weeb/pixelUI/hand_textbox'));
-				add(handSelect);
-			}*/
-	
 			switch (StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase())
 			{	
 				case 'jazz-cup' | 'neon' | 'lost':
 					portraitLeft = new FlxSprite(-20, 0);
-					portraitLeft.frames = Paths.getSparrowAtlas('meme/maggiePortrait');
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogue stuff/maggiePortrait');
 					portraitLeft.animation.addByPrefix('enter', 'Maggie Portrait Enter', 24, false);
 					portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0));
 					portraitLeft.updateHitbox();
@@ -202,7 +158,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = false;
 			
 					portraitRight = new FlxSprite(650, 150);
-					portraitRight.frames = Paths.getSparrowAtlas('meme/bfnPortrait');
+					portraitRight.frames = Paths.getSparrowAtlas('dialogue stuff/bfnPortrait');
 					portraitRight.animation.addByPrefix('enter', 'Boyfriendn portrait enter', 24, false);
 					portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0));
 					portraitRight.updateHitbox();
@@ -232,7 +188,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.screenCenter(X);
 				case 'jazz-cup-remix' | 'neon-remix' | 'lost-remix':
 					portraitLeft = new FlxSprite(-20, 0);
-					portraitLeft.frames = Paths.getSparrowAtlas('doom/maggiePortrait');
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogue stuff/maggieDPortrait');
 					portraitLeft.animation.addByPrefix('enter', 'Maggie Portrait Enter', 24, false);
 					portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0));
 					portraitLeft.updateHitbox();
@@ -241,7 +197,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = false;
 			
 					portraitRight = new FlxSprite(650, 150);
-					portraitRight.frames = Paths.getSparrowAtlas('doom/bfnPortrait');
+					portraitRight.frames = Paths.getSparrowAtlas('dialogue stuff/bfDPortrait');
 					portraitRight.animation.addByPrefix('enter', 'Boyfriendn portrait enter', 24, false);
 					portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0));
 					portraitRight.updateHitbox();

@@ -1,6 +1,6 @@
 Have you ever been curious on what opening an image in Notepad looked liked?
-It just incomprehensible garbage with maybe a few lines of text actually forming words, lol.
-Try it out and see for yourself what a .png looks like in Notepad.
+It's just incomprehensible garbage of Unicode fonts. You would be lucky if you found something there that formed a word or a link.
+You should try it out and see for yourself what a .png looks like in Notepad. Maybe you'll find something cool.
 
 Since you're still here, let me tell you a fun fact about that that loading test image in "assets/images".
 When Cake originally made that drawing, he honestly didn't think about making a mod at all. "15% chance" if I remember correctly, I dunno.
